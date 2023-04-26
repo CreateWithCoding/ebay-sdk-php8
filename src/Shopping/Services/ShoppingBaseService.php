@@ -54,7 +54,8 @@ class ShoppingBaseService extends \DTS\eBaySDK\Services\BaseService
      */
     public function __construct(array $config)
     {
-        parent::__construct('http://open.api.ebay.com/shopping', 'http://open.api.sandbox.ebay.com/shopping', $config);
+        // 4/26/2023 Jeff changed to https from http (eBay required since about February 2023 *** will get CURL 56 error if not changed)
+        parent::__construct('https://open.api.ebay.com/shopping', 'https://open.api.sandbox.ebay.com/shopping', $config);
     }
 
     /**
